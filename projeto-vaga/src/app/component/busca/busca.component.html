@@ -1,13 +1,25 @@
 <h1>Vagas da categoria: {{categoria.categoria}} </h1>
 <div class="cont">
-    <div class="quadro">
-        <p>Gerente de ti</p>
-        <p>Empresa de ti</p>
-        <p>valor</p>
+    <div class="quadro" >
        <div class="item"> 
-        <p>vaga</p>
-        <p>lugar</p>
-        <p>data</p>
+        <h2>{{vaga.vaga}}</h2>
+        <h3>Vagas:{{vaga.quantidade}}</h3>
     </div>
+    <div class="item">
+    <h2>Empresa: {{(vaga.empresa)}}</h2> <!--findEmpresa-->
+    <!-- <h3 *ngFor="let loc of vaga.local">
+        Estado: {{loc.estado}}
+        Cidade:  {{loc.cidade}}
+     </h3> -->
+</div>
+    <div class="item">
+    <h2>De R${{vaga.salario.min}} até R${{vaga.salario.max}}</h2>
+        
+        <h3>Publicada em :{{converteHoras(vaga.publicacao)}}</h3>
+    </div>
+    
+    <button routerLink="/interna/{{vaga.id}}">
+        Conheça a Vaga
+    </button>
     </div>
 </div>

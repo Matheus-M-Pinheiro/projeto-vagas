@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Categorias } from '../model/categorias/categorias';
 import { Empresa } from '../model/empresa/empresa';
+import { Vagas } from '../model/vagas/vagas';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,11 @@ export class GeralService {
   }
   getEmpresas(): Observable<Empresa[]>{
     return this.http.get<Empresa[]>(`${this.urlDaApi}/empresa`) 
+  }
+  getVagas(): Observable<Vagas[]>{
+    return this.http.get<Vagas[]>(`${this.urlDaApi}/vagas`) 
+  }
+  getVagaPorId(id: Number): Observable<Vagas>{
+    return this.http.get<Vagas>(`${this.urlDaApi}/vagas/${id}`)
   }
 }
