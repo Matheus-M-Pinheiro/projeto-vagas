@@ -1,0 +1,43 @@
+.cont{
+    flex-direction: row;
+    display: flex;
+    .quadro{
+        margin-left: 5%;
+        margin-right: 5%;
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        .item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            h3{
+                margin-right: 40px;
+
+            }
+        }
+      
+
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 200px;
+        }
+    }
+    button{
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 75px;
+        border: none;
+        background: #0017E3;
+        color: white;
+        margin-top: 20px;
+
+
+    }
+
+}

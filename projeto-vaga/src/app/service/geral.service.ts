@@ -22,6 +22,9 @@ export class GeralService {
   getEmpresas(): Observable<Empresa[]>{
     return this.http.get<Empresa[]>(`${this.urlDaApi}/empresa`) 
   }
+  getEmpresaPorId(id: Number): Observable<Empresa>{
+    return this.http.get<Empresa>(`${this.urlDaApi}/empresa/${id}`)
+  }
   getVagas(): Observable<Vagas[]>{
     return this.http.get<Vagas[]>(`${this.urlDaApi}/vagas`) 
   }

@@ -13,7 +13,7 @@ export class BuscaComponent implements OnInit{
   categoria : Categorias = new Categorias()
   idDaUrl : number = 0
   vaga: Vagas = new Vagas()
-  empresa : Empresa [] = []
+  empresa : Empresa = new Empresa()
 constructor(
   private api: GeralService,
   private rotaAtiva: ActivatedRoute,
@@ -35,20 +35,20 @@ constructor(
       this.categoria = categorias
     })
   }
-  pegaEmpresas(): void{
-    this.api.getEmpresas().subscribe( (empresas) => {
+  pegaEmpresaId(): void{
+    this.api.getEmpresaPorId(this.idDaUrl).subscribe( (empresas) => {
       this.empresa = empresas
     })
   }
 
-  findEmpresa(id: number): string {
-    let emp = this.empresa.find((obj) => obj.id == id)
-    if(emp){
-      return emp.nome
-    } else {
-      return ''
-    }
-  }
+  // findEmpresa(id: number): string {
+  //   let emp = this.empresa.find((obj) => obj.id == id)
+  //   if(emp){
+  //     return emp.nome
+  //   } else {
+  //     return ''
+  //   }
+  // }
   converteHoras(isoData: string): string{
     let data = new Date(isoData)
     // 10/07/2023 10h45
