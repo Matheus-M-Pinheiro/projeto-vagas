@@ -9,10 +9,10 @@ public vaga : string
 public empresa : number
 public salario : Salario
 public quantidade :number
-public local : Local[]
+public local : Local
 public publicacao : string
 public descricao : string
-public expediente : Expediente[]
+public expediente : Expediente
 public contratacao : string
 public infosAdicionais : string 
 public questionario : Questionario[]
@@ -26,10 +26,10 @@ this.vaga = ''
 this.empresa = 0
 this.salario = new Salario()
 this.quantidade = 0
-this.local = []
+this.local = new Local()
 this.publicacao = ''
 this.descricao = ''
-this.expediente = []
+this.expediente = new Expediente()
 this.contratacao = ''
 this.infosAdicionais = ''
 this.questionario = []

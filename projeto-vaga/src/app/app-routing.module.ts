@@ -5,7 +5,7 @@ import { BuscaComponent } from './component/busca/busca.component';
 import { InternaComponent } from './component/interna/interna.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'busca/:id', component: BuscaComponent },
+  { path: 'busca/:tipo/:id', component: BuscaComponent },
   { path: 'interna/:id', component: InternaComponent },
 ];
 

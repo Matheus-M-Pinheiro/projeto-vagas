@@ -6,10 +6,10 @@
  </div>
  <div class="item">
 
-    <!-- <h3 *ngFor="let loc of vaga.local">
-        Estado: {{loc.estado}}
-        Cidade:  {{loc.cidade}}
-     </h3> -->
+    <h3>
+        Estado: {{vaga.local.estado}}
+        Cidade: {{vaga.local.cidade}}
+     </h3>
 </div>
     <div class="item">
     <h2>De R${{vaga.salario.min}} até R${{vaga.salario.max}}</h2>
@@ -19,16 +19,16 @@
     <p>
     {{vaga.descricao}}
     </p>
-    <!-- <div class="hora" *ngFor="let hora of vaga.expediente"> 
-       Horário: {{hora.dias}} das {{hora.inicio}} até as {{hora.fim}}
-    </div> -->
+    <div class="hora" > 
+       Horário: {{vaga.expediente.dias}} das {{vaga.expediente.inicio}} até as {{vaga.expediente.fim}}
+    </div>
     <p>contratacao: {{vaga.contratacao}}</p>
     <p>Informações adicionais: {{vaga.infosAdicionais}}</p>
 <div class="logo">
-    <img [src]="empresa.logo" alt="">
-    <b>{{empresa.nome}}</b>
+    <img [src]="findEmpresa(vaga.empresa).logo" alt="">
+    <b>{{findEmpresa(vaga.empresa).nome}}</b>
 </div>
-<button routerLink="/interna/{{vaga.id}}">
+<button>
     Responder ao questionário para se cadastrar
 </button>
 </div>  

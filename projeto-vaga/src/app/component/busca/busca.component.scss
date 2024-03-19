@@ -1,9 +1,11 @@
 .cont{
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
+   width: 90%;
+   margin: auto;
+   gap: 25px;
     .quadro{
-        margin-left: 5%;
-        margin-right: 5%;
+        
         border: 3px solid #0017E3;
         box-shadow: 2px 4px 10px 2px #00000040;
         display: flex;

@@ -12,7 +12,7 @@ import { Empresa } from 'src/app/model/empresa/empresa';
 export class InternaComponent  implements OnInit{
   vaga: Vagas = new Vagas()
   idDaUrl : number = 0
-  empresa : Empresa = new Empresa
+  empresa : Empresa[] = []
 
 
   constructor(
@@ -22,7 +22,7 @@ export class InternaComponent  implements OnInit{
   ngOnInit(): void {
     this.idDaUrl = Number(this.rotaAtiva.snapshot.params['id'])
     this.pegaVagaId()
-    this.pegaEmpresaId()
+    this.pegaEmpresa()
   }
   pegaVagaId(): void{
     this.api.getVagaPorId(this.idDaUrl).subscribe( (vagas) => {
@@ -34,9 +34,17 @@ export class InternaComponent  implements OnInit{
     // 10/07/2023 10h45
     return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} `
   }
-  pegaEmpresaId(): void{
-    this.api.getEmpresaPorId(this.idDaUrl).subscribe( (empresas) => {
+  pegaEmpresa(): void{
+    this.api.getEmpresas().subscribe( (empresas) => {
       this.empresa = empresas
     })
+  }
+  findEmpresa(id: number): Empresa {
+    let emp = this.empresa.find((obj) => obj.id == id)
+    if(emp){
+      return emp
+    } else {
+      return new Empresa()
+    }
   }
 }
