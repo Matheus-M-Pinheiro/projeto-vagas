@@ -13,6 +13,8 @@ export class InternaComponent  implements OnInit{
   vaga: Vagas = new Vagas()
   idDaUrl : number = 0
   empresa : Empresa[] = []
+  modalAberto: boolean = false;
+  modalQuestionario: boolean = false;
 
 
   constructor(
@@ -21,6 +23,7 @@ export class InternaComponent  implements OnInit{
   ){}
   ngOnInit(): void {
     this.idDaUrl = Number(this.rotaAtiva.snapshot.params['id'])
+
     this.pegaVagaId()
     this.pegaEmpresa()
   }
@@ -46,5 +49,14 @@ export class InternaComponent  implements OnInit{
     } else {
       return new Empresa()
     }
+  }
+  fecharModal(): void{
+    this.modalQuestionario = false
+
+  }
+
+  abrirModalQuest(): void{
+    this.modalAberto = true
+    this.modalQuestionario = true
   }
 }

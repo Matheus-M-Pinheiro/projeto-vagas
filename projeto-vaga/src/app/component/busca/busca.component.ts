@@ -16,6 +16,7 @@ export class BuscaComponent implements OnInit {
   tipoDeBusca: string = ''
   vagas: Vagas[] = []
   empresa: Empresa[] = []
+  
 
   constructor(
     private api: GeralService,
@@ -67,4 +68,5 @@ export class BuscaComponent implements OnInit {
     // 10/07/2023 10h45
     return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} `
   }
+ 
 }

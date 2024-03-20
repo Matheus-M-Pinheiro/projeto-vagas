@@ -28,7 +28,39 @@
     <img [src]="findEmpresa(vaga.empresa).logo" alt="">
     <b>{{findEmpresa(vaga.empresa).nome}}</b>
 </div>
-<button>
+<button (click)="abrirModalQuest()">
     Responder ao questionário para se cadastrar
 </button>
 </div>  
+
+
+<div class="modal" *ngIf="modalQuestionario">
+    <div class="modal-content" >
+        <span  class="close" (click)="fecharModal()">&times;</span>
+        <h1 >
+          Questionário para {{findEmpresa(vaga.empresa).nome}}
+        </h1>
+    
+        <div class="mdl"  >
+           <div *ngFor="let quest of vaga.questionario">
+            {{quest.pergunta}} <br>
+            <mat-form-field>
+                <mat-select>
+                    
+                  <div>
+                    <mat-option value="">{{quest.alternativas[0]}} </mat-option>
+                    <mat-option value="">{{quest.alternativas[1]}} </mat-option>
+                    <mat-option value="">{{quest.alternativas[2]}} </mat-option>
+                    <mat-option value="">{{quest.alternativas[3]}} </mat-option>
+                  </div>
+                </mat-select>
+                
+            </mat-form-field>
+            
+        </div>
+        <button>Finalizar</button>
+        </div>
+        
+    
+    </div>
+    </div>
