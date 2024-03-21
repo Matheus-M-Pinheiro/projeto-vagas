@@ -3,6 +3,7 @@ import { GeralService } from 'src/app/service/geral.service';
 import { Vagas } from 'src/app/model/vagas/vagas';
 import { ActivatedRoute } from '@angular/router';
 import { Empresa } from 'src/app/model/empresa/empresa';
+import { RespostasQuestionario } from 'src/app/model/respostaQuestionario/respostas-questionario';
 
 @Component({
   selector: 'app-interna',
@@ -15,6 +16,7 @@ export class InternaComponent  implements OnInit{
   empresa : Empresa[] = []
   modalAberto: boolean = false;
   modalQuestionario: boolean = false;
+  resposta : RespostasQuestionario = new RespostasQuestionario()
 
 
   constructor(
@@ -27,21 +29,38 @@ export class InternaComponent  implements OnInit{
     this.pegaVagaId()
     this.pegaEmpresa()
   }
+
   pegaVagaId(): void{
     this.api.getVagaPorId(this.idDaUrl).subscribe( (vagas) => {
       this.vaga = vagas
     })
   }
+
   converteHoras(isoData: string): string{
     let data = new Date(isoData)
     // 10/07/2023 10h45
     return `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} `
   }
+
   pegaEmpresa(): void{
     this.api.getEmpresas().subscribe( (empresas) => {
       this.empresa = empresas
     })
   }
+
+  responderQuestionario():void{
+  this.api.postRespostaQuestionario(this.resposta).subscribe((respostas) => {
+  })
+  }
+
+  mudancaDeValor(valor:string,index:number):void{
+  if(this.resposta.respostas[index].indexOf(valor) >=0){
+    this.resposta.respostas.splice(this.resposta.respostas[index].indexOf(valor),1)
+  }else{
+    this.resposta.respostas.push(valor)
+  }
+  }
+
   findEmpresa(id: number): Empresa {
     let emp = this.empresa.find((obj) => obj.id == id)
     if(emp){

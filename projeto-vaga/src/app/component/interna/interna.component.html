@@ -42,37 +42,44 @@
         </h1>
     
         <div class="mdl"  >
-           <div *ngFor="let quest of vaga.questionario">
+           <div *ngFor="let quest of vaga.questionario;index as ind">
             {{quest.pergunta}} <br>
             <ng-container *ngIf="quest.tipoPergunta == 'alternativaUnica' ">
-            <mat-form-field>
-                <mat-select>
+           
+                <mat-radio-group [(ngModel)]="resposta.respostas[ind]">
                   <div>
-                    <mat-option value="">{{quest.alternativas[0]}} </mat-option>
-                    <mat-option value="">{{quest.alternativas[1]}} </mat-option>
-                    <mat-option value="">{{quest.alternativas[2]}} </mat-option>
-                  </div>
-                </mat-select>
-            </mat-form-field>
+                    <ng-container *ngFor="let alternativa of quest.alternativas" >
+                    
+                        <mat-radio-button  value="">{{alternativa}} </mat-radio-button>
+                    
+                    </ng-container>  
+                </div>
+            </mat-radio-group>
+            
         </ng-container>
 
-        <!-- <ng-container *ngIf="quest.tipoPergunta == 'alternativaMultipla' ">
-            <mat-form-field>
-                  <div>
-                    <input type="checkbox">{{quest.alternativas}}
-                  </div>
-            </mat-form-field>
-        </ng-container> -->
+        <ng-container *ngIf="quest.tipoPergunta == 'alternativaMultipla' ">
+            
+                  <div >
+                    <ng-container *ngFor="let alternativa of quest.alternativas">
+                    <mat-checkbox [checked]="resposta.respostas.includes(alternativa)"
+                    (click)="mudancaDeValor(alternativa,ind)">
+                        {{alternativa}}
+                    </mat-checkbox>
+                </ng-container>  
+                </div>
+            
+        </ng-container>
 
         <ng-container *ngIf="quest.tipoPergunta == 'texto' ">
-            <mat-form-field>
+            <mat-form-field [(ngModel)]="resposta.respostas[ind]">
                   <div>
                     <input matInput type="text">
                   </div>
             </mat-form-field>
         </ng-container>
         </div>
-        <button>Finalizar</button>
+        <button (click)="responderQuestionario()">Finalizar</button>
         </div>
         
     

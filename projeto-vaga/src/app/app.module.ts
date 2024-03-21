@@ -7,11 +7,14 @@ import { HomeComponent } from './component/home/home.component';
 import { BuscaComponent } from './component/busca/busca.component';
 import { InternaComponent } from './component/interna/interna.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox'
+import {MatRadioModule} from '@angular/material/radio'
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

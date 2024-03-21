@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Categorias } from '../model/categorias/categorias';
 import { Empresa } from '../model/empresa/empresa';
 import { Vagas } from '../model/vagas/vagas';
+import { RespostasQuestionario } from '../model/respostaQuestionario/respostas-questionario';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +37,8 @@ export class GeralService {
   }
   getVagaPorEmpresa(id: number): Observable<Vagas[]>{
     return this.http.get<Vagas[]>(`${this.urlDaApi}/vagas?empresa=${id}`)
+  }
+  postRespostaQuestionario(resposta:RespostasQuestionario):Observable<RespostasQuestionario>{
+    return this.http.post<RespostasQuestionario>(`${this.urlDaApi}/respostasQuestionario`,resposta)
   }
 }
