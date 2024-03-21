@@ -44,19 +44,33 @@
         <div class="mdl"  >
            <div *ngFor="let quest of vaga.questionario">
             {{quest.pergunta}} <br>
+            <ng-container *ngIf="quest.tipoPergunta == 'alternativaUnica' ">
             <mat-form-field>
                 <mat-select>
-                    
                   <div>
                     <mat-option value="">{{quest.alternativas[0]}} </mat-option>
                     <mat-option value="">{{quest.alternativas[1]}} </mat-option>
                     <mat-option value="">{{quest.alternativas[2]}} </mat-option>
-                    <mat-option value="">{{quest.alternativas[3]}} </mat-option>
                   </div>
                 </mat-select>
-                
             </mat-form-field>
-            
+        </ng-container>
+
+        <!-- <ng-container *ngIf="quest.tipoPergunta == 'alternativaMultipla' ">
+            <mat-form-field>
+                  <div>
+                    <input type="checkbox">{{quest.alternativas}}
+                  </div>
+            </mat-form-field>
+        </ng-container> -->
+
+        <ng-container *ngIf="quest.tipoPergunta == 'texto' ">
+            <mat-form-field>
+                  <div>
+                    <input matInput type="text">
+                  </div>
+            </mat-form-field>
+        </ng-container>
         </div>
         <button>Finalizar</button>
         </div>
