@@ -32,7 +32,10 @@ export class InternaComponent  implements OnInit{
 
   pegaVagaId(): void{
     this.api.getVagaPorId(this.idDaUrl).subscribe( (vagas) => {
-      this.vaga = vagas
+      this.vaga = vagas 
+      for(let i = 0; i<this.vaga.questionario.length; i++){
+        this.resposta.respostas[i]= []
+      }
     })
   }
 
@@ -49,7 +52,10 @@ export class InternaComponent  implements OnInit{
   }
 
   responderQuestionario():void{
+    this.resposta.idDaVaga = this.vaga.id
+    this.resposta.idDoUsuario = 1 //a fazer 
   this.api.postRespostaQuestionario(this.resposta).subscribe((respostas) => {
+    alert('criou resposta')
   })
   }
 
@@ -57,8 +63,9 @@ export class InternaComponent  implements OnInit{
   if(this.resposta.respostas[index].indexOf(valor) >=0){
     this.resposta.respostas.splice(this.resposta.respostas[index].indexOf(valor),1)
   }else{
-    this.resposta.respostas.push(valor)
+    this.resposta.respostas[index].push(valor)
   }
+  
   }
 
   findEmpresa(id: number): Empresa {

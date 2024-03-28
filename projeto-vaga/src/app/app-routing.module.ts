@@ -1,12 +1,18 @@
-import { NgModule } from '@angular/core';
+import { NgModule, createComponent } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
 import { BuscaComponent } from './component/busca/busca.component';
 import { InternaComponent } from './component/interna/interna.component';
+import { LoginComponent } from './component/login/login.component';
+
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'busca/:tipo/:id', component: BuscaComponent },
   { path: 'interna/:id', component: InternaComponent },
+  { path: 'login', component: LoginComponent },
+  
 ];
 
 @NgModule({

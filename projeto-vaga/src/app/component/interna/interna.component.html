@@ -46,11 +46,11 @@
             {{quest.pergunta}} <br>
             <ng-container *ngIf="quest.tipoPergunta == 'alternativaUnica' ">
            
-                <mat-radio-group [(ngModel)]="resposta.respostas[ind]">
+                <mat-radio-group [(ngModel)]="resposta.respostas[ind][0]">
                   <div>
                     <ng-container *ngFor="let alternativa of quest.alternativas" >
                     
-                        <mat-radio-button  value="">{{alternativa}} </mat-radio-button>
+                        <mat-radio-button  [value]="alternativa">{{alternativa}} </mat-radio-button>
                     
                     </ng-container>  
                 </div>
@@ -62,7 +62,7 @@
             
                   <div >
                     <ng-container *ngFor="let alternativa of quest.alternativas">
-                    <mat-checkbox [checked]="resposta.respostas.includes(alternativa)"
+                    <mat-checkbox [checked]="resposta.respostas[ind].includes(alternativa)"
                     (click)="mudancaDeValor(alternativa,ind)">
                         {{alternativa}}
                     </mat-checkbox>
@@ -72,9 +72,9 @@
         </ng-container>
 
         <ng-container *ngIf="quest.tipoPergunta == 'texto' ">
-            <mat-form-field [(ngModel)]="resposta.respostas[ind]">
+            <mat-form-field >
                   <div>
-                    <input matInput type="text">
+                    <input matInput type="text" [(ngModel)]="resposta.respostas[ind][0]">
                   </div>
             </mat-form-field>
         </ng-container>

@@ -27,12 +27,21 @@
         {
           "tipoPergunta": "alternativaUnica",
           "pergunta": "Quantos anos tem de experiência em TI?",
-          "alternativas": ["-2 anos","2 a 4 anos","5+ anos"]
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
         },
         {
           "tipoPergunta": "alternativaMultipla",
           "pergunta": "Quais destes cargos você já trabalhou?",
-          "alternativas": ["Desenvolvedor", "Gerente", "Comercial", "Executivo"]
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
         },
         {
           "tipoPergunta": "texto",
@@ -68,12 +77,21 @@
         {
           "tipoPergunta": "alternativaUnica",
           "pergunta": "Quantos anos tem de experiência em TI?",
-          "alternativas": ["-2 anos","2 a 4 anos","5+ anos"]
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
         },
         {
           "tipoPergunta": "alternativaMultipla",
           "pergunta": "Quais destes cargos você já trabalhou?",
-          "alternativas": ["Desenvolvedor", "Gerente", "Comercial", "Executivo"]
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
         },
         {
           "tipoPergunta": "texto",
@@ -109,12 +127,21 @@
         {
           "tipoPergunta": "alternativaUnica",
           "pergunta": "Quantos anos tem de experiência em TI?",
-          "alternativas": ["-2 anos","2 a 4 anos","5+ anos"]
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
         },
         {
           "tipoPergunta": "alternativaMultipla",
           "pergunta": "Quais destes cargos você já trabalhou?",
-          "alternativas": ["Desenvolvedor", "Gerente", "Comercial", "Executivo"]
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
         },
         {
           "tipoPergunta": "texto",
@@ -150,12 +177,21 @@
         {
           "tipoPergunta": "alternativaUnica",
           "pergunta": "Quantos anos tem de experiência em TI?",
-          "alternativas": ["-2 anos","2 a 4 anos","5+ anos"]
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
         },
         {
           "tipoPergunta": "alternativaMultipla",
           "pergunta": "Quais destes cargos você já trabalhou?",
-          "alternativas": ["Desenvolvedor", "Gerente", "Comercial", "Executivo"]
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
         },
         {
           "tipoPergunta": "texto",
@@ -195,9 +231,80 @@
       "idDaVaga": 1,
       "idDoUsuario": 1,
       "respostas": [
-        ["5+ anos"],
-        ["Gerente", "Comercial"],
-        ["Empresa de TI"]
+        [
+          "5+ anos"
+        ],
+        [
+          "Gerente",
+          "Comercial"
+        ],
+        [
+          "Empresa de TI"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "idDaVaga": 0,
+      "idDoUsuario": 0,
+      "respostas": []
+    },
+    {
+      "id": 3,
+      "idDaVaga": 0,
+      "idDoUsuario": 0,
+      "respostas": [
+        "",
+        [
+          "Gerente",
+          "Comercial",
+          "Executivo"
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "idDaVaga": 0,
+      "idDoUsuario": 0,
+      "respostas": [
+        "",
+        [
+          "Comercial",
+          "Executivo"
+        ],
+        []
+      ]
+    },
+    {
+      "id": 5,
+      "idDaVaga": 0,
+      "idDoUsuario": 0,
+      "respostas": [
+        [
+          ""
+        ],
+        [
+          "Desenvolvedor",
+          "Gerente"
+        ],
+        []
+      ]
+    },
+    {
+      "id": 6,
+      "idDaVaga": 0,
+      "idDoUsuario": 0,
+      "respostas": [
+        [
+          "2 a 4 anos"
+        ],
+        [
+          "Gerente",
+          "Desenvolvedor"
+        ],
+        [
+          "fdfdf"
+        ]
       ]
     }
   ],

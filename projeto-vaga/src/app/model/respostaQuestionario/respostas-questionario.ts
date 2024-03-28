@@ -2,7 +2,7 @@ export class RespostasQuestionario {
    public id: number
    public idDaVaga: number
    public idDoUsuario: number
-   public respostas: string[]
+   public respostas: string[][]
 
    constructor(){
     this.id = 0
