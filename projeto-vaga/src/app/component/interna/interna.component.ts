@@ -19,6 +19,7 @@ export class InternaComponent  implements OnInit{
   resposta : RespostasQuestionario = new RespostasQuestionario()
 
 
+
   constructor(
     private api:GeralService,
     private rotaAtiva: ActivatedRoute,
@@ -53,7 +54,7 @@ export class InternaComponent  implements OnInit{
 
   responderQuestionario():void{
     this.resposta.idDaVaga = this.vaga.id
-    this.resposta.idDoUsuario = 1 //a fazer 
+    this.resposta.idDoUsuario = Number(localStorage.getItem('idUser'))
   this.api.postRespostaQuestionario(this.resposta).subscribe((respostas) => {
     alert('criou resposta')
   })

@@ -306,6 +306,39 @@
           "fdfdf"
         ]
       ]
+    },
+    {
+      "id": 7,
+      "idDaVaga": 1,
+      "idDoUsuario": 1,
+      "respostas": [
+        [
+          "2 a 4 anos"
+        ],
+        [
+          "Desenvolvedor",
+          "Gerente"
+        ],
+        [
+          "wdwd"
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "idDaVaga": 3,
+      "idDoUsuario": 1,
+      "respostas": [
+        [
+          "2 a 4 anos"
+        ],
+        [
+          "Gerente"
+        ],
+        [
+          "sdd"
+        ]
+      ]
     }
   ],
   "usuarios": [
@@ -320,6 +353,12 @@
       "nomeCompleto": "Anderson Dias",
       "username": "andersonDias",
       "tipo": "admin"
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "anderson dias",
+      "username": "anderson12",
+      "tipo": "cliente"
     }
   ],
   "fazerLogin": [
@@ -334,6 +373,12 @@
       "username": "andersonDias",
       "senha": "123abc",
       "idUsuario": 2
+    },
+    {
+      "id": 3,
+      "username": "anderson12",
+      "senha": "123abc",
+      "idUsuario": 3
     }
   ],
   "conteudoSite": {

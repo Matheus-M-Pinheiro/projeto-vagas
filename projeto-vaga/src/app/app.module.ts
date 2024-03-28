@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './component/login/login.component';
+import { CreateComponent } from './component/crud/create/create.component';
 
 
 
@@ -28,6 +29,7 @@ import { LoginComponent } from './component/login/login.component';
     BuscaComponent,
     InternaComponent,
     LoginComponent,
+    CreateComponent,
     
    
   ],
