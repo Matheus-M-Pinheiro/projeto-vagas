@@ -19,6 +19,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox'
 import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './component/login/login.component';
 import { CreateComponent } from './component/crud/create/create.component';
+import { CreateCategoriasComponent } from './component/crud/create-categorias/create-categorias.component';
+import { CreateEmpresaComponent } from './component/crud/create-empresa/create-empresa.component';
 
 
 
@@ -30,6 +32,8 @@ import { CreateComponent } from './component/crud/create/create.component';
     InternaComponent,
     LoginComponent,
     CreateComponent,
+    CreateCategoriasComponent,
+    CreateEmpresaComponent,
     
    
   ],

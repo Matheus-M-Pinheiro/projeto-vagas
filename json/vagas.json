@@ -216,6 +216,11 @@
       "id": 3,
       "categoria": "Tecnologia",
       "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 4,
+      "categoria": "DCJADOSJC",
+      "icone": "aklHDCOLASDVN"
     }
   ],
   "empresa": [
@@ -223,6 +228,11 @@
       "id": 1,
       "nome": "Empresa de TI",
       "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 2,
+      "nome": "ascnlcn",
+      "logo": "ihoh"
     }
   ],
   "respostasQuestionario": [

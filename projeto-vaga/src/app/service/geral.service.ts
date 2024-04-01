@@ -22,6 +22,12 @@ export class GeralService {
   getCategoriaPorId(id: Number): Observable<Categorias>{
     return this.http.get<Categorias>(`${this.urlDaApi}/categorias/${id}`)
   }
+  CriarNovaCategoria( CategoriaNova: Categorias ): Observable<Categorias>{
+    return this.http.post<Categorias>(`${this.urlDaApi}/categorias`, CategoriaNova) 
+  }
+  deleteCategoria( idCategoria: Number ): Observable<Categorias>{
+    return this.http.delete<Categorias>(`${this.urlDaApi}/categorias/${idCategoria}`) 
+   }
   //EMORESA
   getEmpresas(): Observable<Empresa[]>{
     return this.http.get<Empresa[]>(`${this.urlDaApi}/empresa`) 
@@ -29,9 +35,18 @@ export class GeralService {
   getEmpresaPorId(id: Number): Observable<Empresa>{
     return this.http.get<Empresa>(`${this.urlDaApi}/empresa/${id}`)
   }
+  CriarNovaEmpresa( empresaNova: Empresa ): Observable<Empresa>{
+    return this.http.post<Empresa>(`${this.urlDaApi}/empresa`, empresaNova) 
+  }
+  deleteEmpresa( idempresa: Number ): Observable<Empresa>{
+    return this.http.delete<Empresa>(`${this.urlDaApi}/empresa/${idempresa}`) 
+   }
   //VAGAS
   getVagas(): Observable<Vagas[]>{
     return this.http.get<Vagas[]>(`${this.urlDaApi}/vagas`) 
+  }
+  criarVaga( vagaNova: Vagas ): Observable<Vagas>{
+    return this.http.post<Vagas>(`${this.urlDaApi}/vagas`, vagaNova) // Passamos URL e o objeto do novo produto
   }
   getVagaPorId(id: Number): Observable<Vagas>{
     return this.http.get<Vagas>(`${this.urlDaApi}/vagas/${id}`)

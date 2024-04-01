@@ -6,6 +6,7 @@ import { Questionario } from "./questionario"
 export class Vagas {
     public id : number
 public vaga : string
+public categoria : number
 public empresa : number
 public salario : Salario
 public quantidade :number
@@ -23,6 +24,7 @@ public sobre : string
 constructor(){
 this.id = 0
 this.vaga = ''
+this.categoria = 0
 this.empresa = 0
 this.salario = new Salario()
 this.quantidade = 0
